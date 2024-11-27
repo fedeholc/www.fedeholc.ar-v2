@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contacto de Federico Holc, desarrollador web.">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+  <title>Contactame - Federico Holc</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header class="text-center">
+    <img src="./assets/cat.webp" alt="imagen de un gato negro" id="cat">
+    <h1>¡Hola! =)</h1>
+    <p>Soy FEDE, desarrollador web. </p>
+    <p>Si querés ver mis trabajos entrá a: </p>
+
+    <a class="dashed-link" target="_blank" rel="noopener noreferrer" aria-label="portfolio"
+      href="https://portfolio.fedeholc.ar">portfolio.fedeholc.ar</a>
+
+    <p>También podés contactarme vía: </p>
+  </header>
+
+  <main>
+
+    <section aria-labelledby="contact-links">
+
+      <!-- Este texto no se va a mostrar en pantalla pero sirve para que sea accessible mediante screen readers  -->
+      <h2 class="visually-hidden">Enlaces de contacto</h2>
+
+
+      <table class="links-table">
+        <tr>
+          <td id="link1" class="link">&gt;
+            <a target="_blank" rel="noopener noreferrer" aria-label="Github"
+              href="https://www.github.com/fedeholc/">Github</a>
+        </tr>
+        <tr>
+          <td id="link2" class="link">&gt;
+            <a target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+              href="https://linkedin.com/in/federicoholc/">LinkedIn</a>
+          </td>
+        </tr>
+        <tr>
+          <td id="link3" class="link">&gt;
+            <a target="_blank" rel="noopener noreferrer" aria-label="E-Mail"
+              href="mailto:federicoholc@gmail.com">E-Mail</a>
+          </td>
+          </td>
+        </tr>
+        <tr>
+          <!-- Para mejorar: cuando utilicemos javascript, hacer que se pueda escribir como si fuera el prompt de una terminal -->
+          <td class="prompt">
+            <span class="terminal-input">$</span>
+            <span class="cursor">_</span>
+            <span id="link-text1" class="hidden">Github</span>
+            <span id="link-text2" class="hidden">LinkedIn</span>
+            <span id="link-text3" class="hidden">E-Mail</span>
+          </td>
+        </tr>
+      </table>
+      <img id="photo" loading="lazy" alt="Foto de Federico Holc en duotono verde y negro" src="./assets/fede.webp">
+    </section>
+
+
+
+    <section id="section-contact-form" aria-labelledby="contact-form">
+      <h2 class="text-center ">O dejarme un mensaje aquí:</h2>
+      <!-- Por ahora el formulario no hace nada -->
+      <form id="contact-form" action="https://formspree.io/f/xnnaeppg" method="POST">
+        <div class="form-inputs">
+          <!-- Por una cuestión de diseño no hay etiquetas label, 
+           pero puse las aria label para que se garantize la accesibilidad -->
+          <input id="nombre" name="nombre" type="text" class="form-element" placeholder="Nombre" aria-label="Nombre"
+            required />
+
+          <input id="apellido" name="apellido" type="text" class="form-element" placeholder="Apellido"
+            aria-label="Apellido" required />
+
+          <input id="email" name="email" type="email" class="form-element" placeholder="Correo Electrónico"
+            aria-label="Correo Electrónico" required autocomplete="email" />
+
+          <input id="telefono" name="telefono" type="text" class="form-element" placeholder="Teléfono"
+            aria-label="Teléfono" />
+
+          <textarea id="mensaje" name="mensaje" class="form-element" placeholder="Mensaje" aria-label="Mensaje"
+            required></textarea>
+
+        </div>
+
+        <button type="submit"><img height="24" width="24" src="./assets/icon-send.svg" alt="Icono de enviar"
+            class="send-icon">enviar</button>
+      </form>
+    </section>
+
+  </main>
+  <div class="separador">* * * </div>
+
+  <section id="lado-b">
+    <img src="./assets/cat.webp" alt="imagen de un gato negro">
+
+    <h2> LADO-B </h2>
+    <p>También hago fotos y las podés ver acá:</p>
+    <a class="dashed-link" target="_blank" rel="noopener noreferrer" aria-label="instagram"
+      href="https://www.instagram.com/fedeholc">instagram.com/fedeholc</a>
+    <p>Y un poco (aún está en construcción) acá:</p>
+    <a class="dashed-link" target="_blank" rel="noopener noreferrer" aria-label="fotos.fedeholc.ar"
+      href="https://fotos.fedeholc.ar">fotos.fedeholc.ar</a>
+  </section>
+
+
+  <footer>* * *
+  </footer>
+</body>
+
+</html>
